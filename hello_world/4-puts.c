@@ -1,10 +1,10 @@
 #include <stdio.h>
 /**
  * main - Entry point
- * 
+ *
  * Description: Afficher une phrase sans utiliser printf
- * 
- * 
+ *
+ *
  * Return: Always 0 (Success)
  */
 int main(void)
