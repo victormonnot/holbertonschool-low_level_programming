@@ -1,13 +1,11 @@
 #include <stdio.h>
 /**
- * File: 4-puts.c
- * Auth: Victor
- * Desc: Afficher ""Programming is like..." avec puts et pas printf
- */
-/**
- * main - point d’entrée du programme
- *
- * Return: Toujours 0 (succès)
+ * main - Entry point
+ * 
+ * Description: Afficher une phrase sans utiliser printf
+ * 
+ * 
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
