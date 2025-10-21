@@ -1,13 +1,22 @@
 #include <stdio.h>
+#include "main.h"
 /**
  * main - Entry point
  *
- * Description : Affiche tout les chiffres avec des ", " entre eux
+ * Description : Affiche putchar en itilisant la fonction putchar
  *
  * Return: Toujours 0 (succès)
  */
 int main(void)
 {
-	printf("_putchar\n");
+	_putchar('_');
+	_putchar('p');
+	_putchar('u');
+	_putchar('t');
+	_putchar('c');
+	_putchar('h');
+	_putchar('a');
+	_putchar('r');
+	_putchar('\n');
 	return (0);
 }
