@@ -4,7 +4,7 @@
 /**
  * main - Entry point
  *
- * Description : Affiche tout les nombres a un digit de base 10
+ * Description : Affiche tout les chiffres avec des ", " entre eux
  *
  * Return: Toujours 0 (succès)
  */
@@ -14,9 +14,17 @@ int main(void)
 
 	for (c = '0'; c <= '9'; c++)
 	{
-		putchar(c);
-		putchar(',');
-		putchar(' ');
+		if (c < '9')
+		{
+			putchar(c);
+			putchar(',');
+			putchar(' ');
+		}
+		else
+		{
+			putchar(c);
+		}
 	}
+
 	return (0);
 }
