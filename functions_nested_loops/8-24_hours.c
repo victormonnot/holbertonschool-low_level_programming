@@ -3,8 +3,7 @@
 /**
  * jack_bauer - Entry point
  *
- * Description : Sort le dernier digit d'un nombre
- * @n: le nombre a check
+ * Description : Affiche toutes les minutes d'une journée aevc les heures
  *
  * Return: Toujours 0 (succès)
  */
