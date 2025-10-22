@@ -4,7 +4,6 @@
  * times_table - Entry point
  *
  * Description : Affiche la table de 9
- * @n: le nombre a check
  *
  * Return: Toujours 0 (succès)
  */
