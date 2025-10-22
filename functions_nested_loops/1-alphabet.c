@@ -15,15 +15,3 @@ void print_alphabet(void)
 	_putchar (lettre);
 	_putchar ('\n');
 }
-/**
- * main - Entry point
- *
- * Description : Check the code
- *
- * Return: Toujours 0 (succès)
- */
-int main(void)
-{
-	print_alphabet();
-	return (0);
-}
