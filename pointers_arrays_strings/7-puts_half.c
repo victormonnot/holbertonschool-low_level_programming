@@ -12,7 +12,6 @@ void puts_half(char *str)
 {
 	int longueur;
 	int i;
-	int caca;
 
 	while (str[longueur] != '\0')
 	{
