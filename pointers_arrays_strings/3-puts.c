@@ -10,8 +10,6 @@
  */
 void _puts(char *str)
 {
-	int longueur = 0;
-
 	while (*str != '\0')
 	{
 		_putchar(*str);
