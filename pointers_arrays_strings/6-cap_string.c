@@ -11,6 +11,8 @@
 char *cap_string(char *phrase)
 {
 	int i = 0;
+	int j;
+	char array[] = " \t\n,;.!?\"(){}";
 
 	while (phrase[i] != '\0')
 	{
@@ -18,17 +20,14 @@ char *cap_string(char *phrase)
 		{
 			phrase[i] -= 32;
 		}
-		if (phrase[i] == ' ' || phrase[i] == '\t' || phrase[i] == '\n' ||
-			phrase[i] == ',' || phrase[i] == ';' || phrase[i] == '.' ||
-			phrase[i] == '!' || phrase[i] == '?' || phrase[i] == '"' ||
-			phrase[i] == '(' || phrase[i] == ')' || phrase[i] == '{' ||
-			phrase[i] == '}')
+		for (j = 0; array[j] != '\0'; j++)
+		{
+			if (phrase[i] == array[j] && phrase[i + 1] >= 'a' && phrase[i + 1] <= 'z')
 			{
-				if (phrase[i + 1] >= 'a' && phrase[i + 1] <= 'z')
-				{
-					phrase[i + 1] -= 32;
-				}
+				phrase[i + 1] -= 32;
+				break;
 			}
+		}
 		i++;
 	}
 	return (phrase);
