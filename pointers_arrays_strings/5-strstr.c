@@ -18,8 +18,8 @@ char *_strstr(char *haystack, char *needle)
 
 		while (*h == *n && *h != '\0')
 		{
-			*h++;
-			*n++;
+			h++;
+			n++;
 		}
 		if (*h == '\0')
 		{
