@@ -3,19 +3,31 @@
 /**
  * _atoi - Entry point
  *
- * Description : reverse le contenu d'une array d'int
- * @s: le nombre d'éléments
+ * Description : convertit un string a un integer
+ * @s: le string a convertir
  *
- * Return: Toujours 0 (succès)
+ * Return: a
  */
 int _atoi(char *s)
 {
 	int i = 0;
+	int sign = 1;
+	int result = 0;
+	int found_digit = 0;
 
 	while (s[i] != '\0')
 	{
+		if (s[i] == '-')
+			sign *= -1;
+		else if (s[i] >= '0' && s[i] <= '9')
+		{
+			found_digit = 1;
+			result = result * 10 + (s[i] - '0');
+		}
+		else if (found_digit)
+			break;
 		i++;
-		break;
 	}
-	return (0);
+
+	return (result * sign);
 }
