@@ -11,9 +11,6 @@ void print_dog(struct dog *d)
 	{
 		return;
 	}
-	d->name;
-	d->age;
-	d->owner;
 
 	if (d->name != NULL)
 	{
