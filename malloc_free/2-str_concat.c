@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
-
 /**
  * str_concat - retourne un pointeur qui contient la copie d'un string
  * @s1: le premier string a copier
@@ -17,7 +16,6 @@ char *str_concat(char *s1, char *s2)
 	unsigned int i;
 	unsigned int j;
 
-
 	if (s1 == NULL)
 	{
 		s1 = "";
@@ -27,7 +25,6 @@ char *str_concat(char *s1, char *s2)
 		s2 = "";
 	}
 
-
 	while (s1[longueur1] != '\0')
 	{
 		longueur1++;
@@ -36,14 +33,11 @@ char *str_concat(char *s1, char *s2)
 	{
 		longueur2++;
 	}
-
 	concat = malloc((longueur1 + longueur2 + 1) * sizeof(char));
-
 	if (concat == NULL)
 	{
 		return (NULL);
 	}
-
 	for (i = 0; i < longueur1; i++)
 	{
 		concat[i] = s1[i];
@@ -54,6 +48,5 @@ char *str_concat(char *s1, char *s2)
 	}
 
 	concat[i + j] = '\0';
-
 	return (concat);
 }
