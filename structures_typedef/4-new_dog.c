@@ -3,6 +3,21 @@
 #include <string.h>
 
 /**
+ * mon_strdup - .
+ * @s: .
+ * Return: .
+ */
+static char *mon_strdup(const char *s)
+{
+	int len = strlen(s) + 1;
+	char *dup = malloc(len);
+
+	if (dup)
+		memcpy(dup, s, len);
+	return (dup);
+}
+
+/**
  * new_dog - crée un nouveau chien
  * @name: nom du chien
  * @age: âge du chien
@@ -11,41 +26,31 @@
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *dog;
-	char *copienom;
-	char *copieowner;
+	dog_t *p = malloc(sizeof(dog_t));
 
-	dog = malloc(sizeof(dog_t));
-
-	if (dog == NULL)
+	if (p == NULL)
 	{
 		return (NULL);
 	}
 
-	copienom = malloc(strlen(name) + 1);
+	p->name = mon_strdup(name);
 
-	if (copienom == NULL)
+	if (p->name == NULL)
 	{
-		free(dog);
+		free(p);
 		return (NULL);
 	}
 
-	strcpy(copienom, name);
+	p->owner = mon_strdup(owner);
 
-	copieowner = malloc(strlen(owner) + 1);
-
-	if (copieowner == NULL)
+	if (p->owner == NULL)
 	{
-		free(copienom);
-		free(dog);
+		free(p->name);
+		free(p);
 		return (NULL);
 	}
 
-	strcpy(copieowner, owner);
+	p->age = age;
 
-	dog->name = copienom;
-	dog->age = age;
-	dog->owner = copieowner;
-
-	return (dog);
+	return (p);
 }
