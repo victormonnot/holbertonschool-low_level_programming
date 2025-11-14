@@ -9,11 +9,28 @@
  */
 static char *mon_strdup(const char *s)
 {
-	int len = strlen(s) + 1;
-	char *dup = malloc(len);
+	int len = 0;
+	int i;
+	char *dup;
 
-	if (dup)
-		memcpy(dup, s, len);
+	while (s[len] != '\0')
+	{
+		len++;
+	}
+	len++;
+
+	dup = malloc(len);
+
+	if (dup == NULL)
+	{
+		return (NULL);
+	}
+
+	for (i = 0; i < len; i++)
+	{
+		dup[i] = s[i];
+	}
+
 	return (dup);
 }
 
